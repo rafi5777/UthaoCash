@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "739595660319",
+    "firebase_url": "https://fastcashloan2-8c87b.firebaseio.com",
+    "project_id": "fastcashloan2-8c87b",
+    "storage_bucket": "fastcashloan2-8c87b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739595660319:android:3ace666398592292a6392a",
+        "android_client_info": {
+          "package_name": "com.example.user.fastcashloan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739595660319-drhuiiqj74t6caq6mc28cgo1t4vg6lkj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.fastcashloan",
+            "certificate_hash": "2b62939398f8ab78b19b2eab1faa9e48bf92bd32"
+          }
+        },
+        {
+          "client_id": "739595660319-v16tupitis7e534pofi2stkvio0dnvh8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzqNU6QNtFVu8GBbM2RaRDzeWzII9q-RM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739595660319-v16tupitis7e534pofi2stkvio0dnvh8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
