@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneNumberRegistetion">
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <ImageView
+            android:id="@+id/back_btn_number_regi"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp"
+            tools:ignore="VectorDrawableCompat" />
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Mobile Number Registetion"
+            android:gravity="center"
+            android:textSize="20dp"/>
+        <ImageView
+            android:id="@+id/helpine"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/customer_service"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/bgBottomNavigation"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_below="@id/layout"
+        android:id="@+id/header_set_your"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your Mobile Number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp"/>
+
+
+
+        <EditText
+            android:id="@+id/set_password_et"
+            android:layout_below="@id/header_set_your"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="30dp"
+            android:inputType="phone"
+            android:hint="mobile number"
+            android:background="@drawable/edittext"
+            android:padding="10dp"
+            />
+
+
+    <Button
+        android:id="@+id/nextID"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/go_to_Login"
+        android:layout_margin="20dp"
+       android:background="@drawable/btn_back_gra"
+        android:text="next"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"/>
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/set_password_et"
+        android:src="@drawable/protect"/>
+    <TextView
+        android:id="@+id/agreement"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"
+        android:padding="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/set_password_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agree with Rapid Cash Terms of Service and Privacy Policy"/>
+    <TextView
+        android:id="@+id/go_to_Login"
+        android:layout_marginTop="50dp"
+        android:textSize="15dp"
+        android:padding="2dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="Already have an account,go to Login  >"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

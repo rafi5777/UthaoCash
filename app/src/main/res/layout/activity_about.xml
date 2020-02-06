@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".About">
-
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp"
+            tools:ignore="VectorDrawableCompat" />
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="About  us"
+            android:gravity="center"
+            android:textSize="20dp"/>
+        <ImageView
+            android:id="@+id/helpine"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/customer_service"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/bgBottomNavigation"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <ImageView
+        android:id="@+id/header"
+        android:layout_below="@id/layout"
+        android:layout_centerHorizontal="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/uc"/>
+    <TextView
+        android:layout_below="@id/header"
+        android:layout_margin="20dp"
+        android:text="Uthao cash is an online base loan provider.Its work for different class of people in the socity .Its very easy to use .  "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</RelativeLayout>

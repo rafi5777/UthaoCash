@@ -17,7 +17,33 @@
             </intent-filter>
         </activity>
         <activity android:name=".About" />
-        <activity android:name=".Account"></activity>
+        <activity android:name=".Account" />
+        <activity android:name=".Auth" />
+        <activity android:name=".CameraForBack_NID" />
+        <activity android:name=".CameraForBilling_NID" />
+        <activity android:name=".CameraForEmployee_NID" />
+        <activity android:name=".CameraForFront_NID" />
+        <activity android:name=".CameraForHandHeld_NID" />
+        <activity android:name=".CameraForTin_ID" />
+        <activity android:name=".Contacts" />
+        <activity android:name=".Disbursement" />
+        <activity android:name=".Feedback" />
+        <activity android:name=".Loan" />
+        <activity android:name=".Loan_Record" />
+        <activity android:name=".Messages" />
+        <activity android:name=".ModifyPassWord" />
+        <activity android:name=".PhoneNumberRegistetion" />
+        <activity android:name=".Photos_Upload" />
+        <activity android:name=".PinPackCode" />
+        <activity android:name=".Repayment" />
+        <activity android:name=".SetPassword" />
+        <activity android:name=".Setting" />
+        <activity android:name=".Share" />
+        <activity android:name=".UserProfile" />
+        <activity android:name=".WorkType" />
+        <activity android:name=".Coupon" />
+        <activity android:name=".Online_Services" />
+        <activity android:name=".LoginPage"></activity>
     </application>
 
 </manifest>

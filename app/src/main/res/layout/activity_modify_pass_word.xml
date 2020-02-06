@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModifyPassWord">
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp"
+            tools:ignore="VectorDrawableCompat" />
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Setting"
+            android:gravity="center"
+            android:textSize="20dp"/>
+        <ImageView
+            android:id="@+id/helpine"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/customer_service"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/bgBottomNavigation"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+
+    <RelativeLayout
+
+        android:id="@+id/layout_old_pass"
+        android:layout_below="@id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:id="@+id/old_pass_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:hint="Enter old Password"
+            android:inputType="phone"
+            android:padding="10dp"/>
+        <Button
+            android:id="@+id/submite_btn"
+            android:layout_below="@id/old_pass_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Submite"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_back_gra"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout_new_pass"
+        android:layout_below="@id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:id="@+id/new_pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext"
+            android:hint="Enter New Password"
+            android:inputType="phone"
+            android:padding="10dp"/>
+        <EditText
+            android:id="@+id/new_pass1"
+            android:layout_below="@id/new_pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext"
+            android:hint="Re-Enter New Password"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"/>
+        <Button
+            android:id="@+id/submite_new_pass"
+            android:layout_below="@id/new_pass1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Submite"
+            android:textAllCaps="false"
+            android:background="@drawable/button_background"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>

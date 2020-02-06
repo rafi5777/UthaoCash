@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Contacts">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp"
+                tools:ignore="VectorDrawableCompat" />
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Emergency Contact"
+                android:gravity="center"
+                android:textSize="20dp"/>
+            <ImageView
+                android:id="@+id/helpine"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/customer_service"
+                android:layout_alignParentRight="true"
+                android:backgroundTint="@color/bgBottomNavigation"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/view"
+            android:layout_below="@id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:id="@+id/first"
+            android:layout_below="@id/view"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            >
+            <params.com.stepview.StatusViewScroller
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:stepCount="5"
+                app:currentCount="3"
+                app:drawLabels="true"
+                app:circleColorType="fillStroke"
+                app:lineGap="3sp"
+                app:lineWidth="3dp"
+                app:lineColor="@color/bgBottomNavigation"
+                app:lineColorIncomplete="#B4B7BA"
+                app:lineColorCurrent="#91A8D0"
+                app:circleColor="#CC004B8D"
+                app:circleColorCurrent="#004B8D"
+                app:circleColorIncomplete="#BCBCBE"
+                app:textColorLabels="@android:color/white"
+                app:textColorLabelsCurrent="@android:color/white"
+                app:textColorLabelsIncomplete="@android:color/black"
+                app:circleStrokeWidth="4dp"
+                app:circleStrokeColorCurrent="#91A8D0"
+                app:textSizeLabels="15sp"
+                app:completeDrawable="@drawable/ic_done_black_24dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/protect"
+            android:layout_below="@id/first"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="50dp"
+            android:textSize="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We will not use this information for other purpose"/>
+
+
+        <LinearLayout
+            android:id="@+id/UserContact"
+            android:layout_below="@id/protect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Relationship"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:textSize="20dp"
+                    />
+                <Spinner
+                    android:id="@+id/Relationship1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="12dp"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="8dp"
+                    android:entries="@array/reletion"
+                    android:layout_marginLeft="25dp"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/relativeNumber1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/edittext"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:padding="15dp"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Relationship"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:textSize="20dp"
+                    />
+                <Spinner
+                    android:id="@+id/Relationship2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="12dp"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="8dp"
+                    android:entries="@array/reletion"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="25dp" />
+
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/relativeNumber2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/edittext"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:padding="15dp"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Relationship"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:textSize="20dp"
+                    />
+                <Spinner
+                    android:id="@+id/Relationship3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="12dp"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="8dp"
+                    android:entries="@array/reletion"
+                    android:layout_marginLeft="25dp"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/relativeNumber3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/edittext"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:padding="15dp"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Relationship"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:textSize="20dp"
+                    />
+                <Spinner
+                    android:id="@+id/Relationship4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="12dp"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="8dp"
+                    android:entries="@array/reletion"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="25dp" />
+
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/relativeNumber4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/edittext"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:padding="15dp"
+                />
+            <Button
+                android:id="@+id/contacts_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Submite"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_back_gra"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

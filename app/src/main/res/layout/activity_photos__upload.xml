@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Photos_Upload">
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp"/>
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Upload photos"
+            android:gravity="center"
+            android:textSize="20dp"/>
+        <ImageView
+            android:id="@+id/helpine"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/customer_service"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/bgBottomNavigation"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_below="@id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_below="@id/view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        >
+        <params.com.stepview.StatusViewScroller
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:stepCount="5"
+            app:currentCount="5"
+            app:drawLabels="true"
+            app:circleColorType="fillStroke"
+            app:lineGap="3dp"
+            app:lineWidth="3dp"
+            app:lineColor="@color/bgBottomNavigation"
+            app:lineColorIncomplete="#B4B7BA"
+            app:lineColorCurrent="#91A8D0"
+            app:circleColor="#CC004B8D"
+            app:circleColorCurrent="#004B8D"
+            app:circleColorIncomplete="#BCBCBE"
+            app:textColorLabels="@android:color/white"
+            app:textColorLabelsCurrent="@android:color/white"
+            app:textColorLabelsIncomplete="@android:color/black"
+            app:circleStrokeWidth="4dp"
+            app:circleStrokeColorCurrent="#91A8D0"
+            app:textSizeLabels="15sp"
+            app:completeDrawable="@drawable/ic_done_black_24dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/protect"
+        android:layout_below="@id/first"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="11dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Photos are only used for loan verification"/>
+    <RelativeLayout
+        android:id="@+id/Front_photo"
+        android:onClick="ShowPopup1"
+        android:layout_below="@+id/protect"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Front photo of NID card"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tik"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"/>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/Front_photo"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <RelativeLayout
+        android:id="@+id/Backphoto"
+        android:layout_below="@+id/Front_photo"
+        android:onClick="ShowPopup2"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Back photo of NID card"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tik"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"/>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/Backphoto"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <RelativeLayout
+        android:id="@+id/Handheld_NID"
+        android:layout_below="@+id/Backphoto"
+        android:onClick="ShowPopup3"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="HandHeld NID card"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tik"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"/>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/Handheld_NID"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <RelativeLayout
+        android:id="@+id/EmployeeID"
+        android:layout_below="@+id/Handheld_NID"
+        android:layout_marginTop="5dp"
+        android:onClick="ShowPopup4"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="EmployeeID(optional)"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tik"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"/>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/EmployeeID"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <RelativeLayout
+        android:id="@+id/TIN_cer"
+        android:layout_below="@+id/EmployeeID"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="TIN certificate(optional)"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tik"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"/>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/TIN_cer"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <RelativeLayout
+        android:id="@+id/Proof_bills"
+        android:layout_below="@+id/TIN_cer"
+        android:layout_marginTop="5dp"
+        android:onClick="ShowPopup5"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Proof of billing(optinal)"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tik"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"/>
+
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/viewProof"
+        android:layout_below="@id/Proof_bills"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <Button
+        android:layout_below="@id/viewProof"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Submite"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_back_gra"/>
+</RelativeLayout>
