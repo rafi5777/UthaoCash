@@ -10,8 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ViewFlipper;
 
-public class Loan extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
 
+public class Loan extends AppCompatActivity {
+    private FirebaseAuth mAuth;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -23,7 +25,15 @@ public class Loan extends AppCompatActivity {
 
                     return true;
                 case R.id.navigation_dashboard:
-                    startActivity(new Intent(getApplicationContext(),Auth.class));
+                    if (mAuth.getCurrentUser()!=null)
+                    {
+                        startActivity(new Intent(getApplicationContext(),Auth.class));
+                    }
+                    else {
+
+                        Intent intent =new Intent(Loan.this,LoginPage.class);
+                        startActivity(intent);
+                    }
                     overridePendingTransition(0, 0);
                     return true;
                 case R.id.navigation_notifications:
@@ -39,7 +49,7 @@ public class Loan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loan);
-
+        mAuth=FirebaseAuth.getInstance();
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigation.setSelectedItemId(R.id.navigation_home);

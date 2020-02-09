@@ -65,14 +65,19 @@
             android:padding="5sp"
             />
 
-
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_below="@id/text33"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <com.chaos.view.PinView
             android:layout_below="@id/text33"
             android:id="@+id/pinView"
             style="@style/PinWidget.PinView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="50dp"
             android:cursorVisible="true"
             android:inputType="number"
             android:padding="10dp"
@@ -89,16 +94,37 @@
             app:lineWidth="2dp"
             app:viewType="rectangle"
             android:layout_centerInParent="true"/>
+        <Button
+            android:id="@+id/buttonSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pinView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_back_gra"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="#cdd8f1" />
         <TextView
             android:id="@+id/donot_get_code"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="10dp"
             android:layout_centerInParent="true"
-            android:layout_below="@id/pinView"
+            android:layout_below="@id/buttonSignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Don't you get the code? "
             android:textColor="@android:color/holo_blue_dark"/>
+        <TextView
+            android:id="@+id/code_resent"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/buttonSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend "
+            android:textColor="@android:color/holo_purple"/>
 
     </RelativeLayout>
 </RelativeLayout>

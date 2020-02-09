@@ -10,8 +10,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-public class Auth extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
 
+public class Auth extends AppCompatActivity {
+    private FirebaseAuth mAuth;
     private String[] immeadiately_Loan;
     private int[] loanItemPicture={R.drawable.school_id,R.drawable.workinfo,R.drawable.mobile,
             R.drawable.disinfo,R.drawable.stack_of_photos};
@@ -26,7 +28,15 @@ public class Auth extends AppCompatActivity {
                     overridePendingTransition(0, 0);
                     return true;
                 case R.id.navigation_dashboard:
+                    if (mAuth.getCurrentUser()!=null)
+                    {
+                        startActivity(new Intent(getApplicationContext(),Auth.class));
+                    }
+                    else {
 
+                        Intent intent =new Intent(Auth.this,LoginPage.class);
+                        startActivity(intent);
+                    }
                     return true;
                 case R.id.navigation_notifications:
                     startActivity(new Intent(getApplicationContext(),Account.class));
@@ -41,7 +51,7 @@ public class Auth extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
-
+        mAuth=FirebaseAuth.getInstance();
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigation.setSelectedItemId(R.id.navigation_dashboard);

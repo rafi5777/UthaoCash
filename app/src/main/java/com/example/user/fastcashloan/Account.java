@@ -11,8 +11,10 @@ import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-public class Account extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
 
+public class Account extends AppCompatActivity {
+    private FirebaseAuth mAuth;
     private String[] componenet_name;
     private int[] component_image={R.drawable.repayment,R.drawable.loan_record,R.drawable.money,
             R.drawable.email,R.drawable.share,R.drawable.customer_service,R.drawable.feedback,R.drawable.letter,R.drawable.settings};
@@ -28,7 +30,16 @@ public class Account extends AppCompatActivity {
                     overridePendingTransition(0, 0);
                     return true;
                 case R.id.navigation_dashboard:
-                    startActivity(new Intent(getApplicationContext(),Auth.class));
+                    if (mAuth.getCurrentUser()!=null)
+                    {
+                        startActivity(new Intent(getApplicationContext(),Auth.class));
+                    }
+                    else {
+
+                        Intent intent =new Intent(Account.this,LoginPage.class);
+                        startActivity(intent);
+                    }
+
                     overridePendingTransition(0, 0);
                     return true;
                 case R.id.navigation_notifications:
@@ -43,8 +54,7 @@ public class Account extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
-
-
+        mAuth=FirebaseAuth.getInstance();
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigation.setSelectedItemId(R.id.navigation_notifications);
@@ -60,28 +70,63 @@ public class Account extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i==0)
                 {
-                    Intent intent =new Intent(Account.this,Repayment.class);
-                    startActivity(intent);
+                    if(mAuth.getCurrentUser()!=null)
+                        {
+                            Intent intent =new Intent(Account.this,Repayment.class);
+                            startActivity(intent);
+                        }
+                        else
+                    {
+                        Intent intent =new Intent(Account.this,LoginPage.class);
+                        startActivity(intent);
+                    }
+
+
                 }
                 if(i==1)
+                {if(mAuth.getCurrentUser()!=null)
                 {
                     Intent intent =new Intent(Account.this,Loan_Record.class);
                     startActivity(intent);
                 }
+                else
+                {
+                    Intent intent =new Intent(Account.this,LoginPage.class);
+                    startActivity(intent);
+                }
+                }
                 if(i==2)
                 {
-                    Intent intent =new Intent(Account.this,Coupon.class);
-                    startActivity(intent);
+                    if(mAuth.getCurrentUser()!=null)
+                    {
+                        Intent intent =new Intent(Account.this,Coupon.class);
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Intent intent =new Intent(Account.this,LoginPage.class);
+                        startActivity(intent);
+                    }
                 }
                 if(i==3)
                 {
-                    Intent intent =new Intent(Account.this,Messages.class);
-                    startActivity(intent);
+                    if(mAuth.getCurrentUser()!=null)
+                    {
+                        Intent intent =new Intent(Account.this,Messages.class);
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Intent intent =new Intent(Account.this,LoginPage.class);
+                        startActivity(intent);
+                    }
                 }
                 if(i==4)
                 {
-                    Intent intent =new Intent(Account.this,Share.class);
-                    startActivity(intent);
+
+                        Intent intent =new Intent(Account.this,Share.class);
+                        startActivity(intent);
+
                 }
                 if(i==5)
                 {
@@ -100,8 +145,16 @@ public class Account extends AppCompatActivity {
                 }
                 if(i==8)
                 {
-                    Intent intent =new Intent(Account.this,Setting.class);
-                    startActivity(intent);
+                    if(mAuth.getCurrentUser()!=null)
+                    {
+                        Intent intent =new Intent(Account.this,Setting_Activity.class);
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Intent intent =new Intent(Account.this,LoginPage.class);
+                        startActivity(intent);
+                    }
                 }
             }
         });

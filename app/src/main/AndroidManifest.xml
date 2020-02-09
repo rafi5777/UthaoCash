@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user.fastcashloan">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -37,13 +39,13 @@
         <activity android:name=".PinPackCode" />
         <activity android:name=".Repayment" />
         <activity android:name=".SetPassword" />
-        <activity android:name=".Setting" />
         <activity android:name=".Share" />
         <activity android:name=".UserProfile" />
         <activity android:name=".WorkType" />
         <activity android:name=".Coupon" />
         <activity android:name=".Online_Services" />
-        <activity android:name=".LoginPage"></activity>
+        <activity android:name=".LoginPage" />
+        <activity android:name=".Setting_Activity"></activity>
     </application>
 
 </manifest>

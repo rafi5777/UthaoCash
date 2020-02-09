@@ -60,6 +60,7 @@
             android:layout_height="50dp"
             android:layout_margin="30dp"
             android:inputType="phone"
+            android:drawableLeft="@drawable/ic_local_phone_black_24dp"
             android:hint="mobile number"
             android:background="@drawable/edittext"
             android:padding="10dp"

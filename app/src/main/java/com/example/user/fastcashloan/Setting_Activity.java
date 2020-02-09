@@ -10,19 +10,19 @@ import android.widget.RelativeLayout;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Setting extends AppCompatActivity {
+public class Setting_Activity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
+        setContentView(R.layout.activity_setting_);
         RelativeLayout relativeLayout=findViewById(R.id.relativeID);
         Button logout=findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                Intent intent_go_to_loan=new Intent(Setting.this,Loan.class);
+                Intent intent_go_to_loan=new Intent(Setting_Activity.this,Loan.class);
                 intent_go_to_loan.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent_go_to_loan);
 
@@ -32,16 +32,16 @@ public class Setting extends AppCompatActivity {
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_back=new Intent(Setting.this,Account.class);
+                Intent intent_back=new Intent(Setting_Activity.this,Account.class);
                 startActivity(intent_back);
             }
         });
 
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(Setting.this,ModifyPassWord.class);
-                startActivity(intent);
+            public void onClick(View v) {
+                Intent go_to_modofyPass= new Intent(Setting_Activity.this,ModifyPassWord.class);
+                startActivity(go_to_modofyPass);
             }
         });
     }

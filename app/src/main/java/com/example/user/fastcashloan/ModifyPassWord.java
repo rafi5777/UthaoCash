@@ -20,7 +20,7 @@ public class ModifyPassWord extends AppCompatActivity {
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_back=new Intent(ModifyPassWord.this,Setting.class);
+                Intent intent_back=new Intent(ModifyPassWord.this,Setting_Activity.class);
                 startActivity(intent_back);
             }
         });
