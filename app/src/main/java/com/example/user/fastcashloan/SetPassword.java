@@ -23,7 +23,7 @@ import java.util.Map;
 public class SetPassword extends AppCompatActivity {
     private FirebaseAuth mAuth;
   private   EditText editTextPassword;
-    String URL_REGIST="http://192.168.0.105/users/newregiste.php";
+    String URL_REGIST="http://192.168.0.105/users/newpassword.php";
     String password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -100,42 +100,42 @@ public class PhoneNumberRegistetion extends AppCompatActivity {
     private void InsertData() {
         Phonenumber=phoneNumber.getText().toString().trim();
         final RequestQueue requestQueue= Volley.newRequestQueue(this);
+        Intent intent=new Intent(PhoneNumberRegistetion.this,PinPackCode.class);
+        intent.putExtra("Phonenumber",Phonenumber);
+        startActivity(intent);
+        phoneNumber.setText("");
 
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, URL_REGIST,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response)
-                    {
-                        Toast.makeText(PhoneNumberRegistetion.this,response, Toast.LENGTH_SHORT).show();
-                        phoneNumber.setText("");
+        // StringRequest stringRequest=new StringRequest(Request.Method.POST, URL_REGIST,
+             //   new Response.Listener<String>() {
+           //         @Override
+               //     public void onResponse(String response)
+                 //   {
+                   //     Toast.makeText(PhoneNumberRegistetion.this,response, Toast.LENGTH_SHORT).show();
+                     //
 
-                        Intent intent=new Intent(PhoneNumberRegistetion.this,PinPackCode.class);
-                        intent.putExtra("Phonenumber",Phonenumber);
-                        startActivity(intent);
+    //}
+      //          }, new Response.ErrorListener() {
+        //    @Override
+          //  public void onErrorResponse(VolleyError error)
+            //{
+              //  Toast.makeText(PhoneNumberRegistetion.this, "try again..", Toast.LENGTH_SHORT).show();
 
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error)
-            {
-                Toast.makeText(PhoneNumberRegistetion.this, "try again..", Toast.LENGTH_SHORT).show();
-
-            }
-        }
+     //       }
+       // }
 
 
-        ){
-            @Override
-            protected Map<String, String> getParams()  {
-                Map<String,String> params= new HashMap<String,String>();
+        //){
+          //  @Override
+            //protected Map<String, String> getParams()  {
+              //  Map<String,String> params= new HashMap<String,String>();
+//
+  //                  params.put("phoneNumber",Phonenumber);
+//
+  //              return params;
+    //        }
+      //  };
 
-                    params.put("phoneNumber",Phonenumber);
-
-                return params;
-            }
-        };
-
-requestQueue.add(stringRequest);
+//requestQueue.add(stringRequest);
 
 
 
