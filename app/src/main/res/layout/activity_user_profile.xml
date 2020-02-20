@@ -170,7 +170,8 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginBottom="8dp"
                     android:entries="@array/Gender"
-                    android:layout_alignParentRight="true" />
+                    android:layout_alignParentRight="true"
+                    tools:ignore="RtlHardcoded" />
 
             </RelativeLayout>
             <RelativeLayout
@@ -187,15 +188,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
-                    android:layout_marginTop="17dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="25dp"
                     android:layout_marginBottom="8dp"
                     android:textSize="20dp"
                     android:text="Date of Birth" />
 
-                <TextView
+                <EditText
                     android:id="@+id/datePicker"
-
+                    android:background="@drawable/edittextbirth"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
@@ -203,18 +204,12 @@
                     android:layout_marginEnd="25dp"
                     android:layout_marginBottom="8dp"
                     android:padding="15dp"
+                    android:hint="dd-mm-yyyy"
                     android:layout_marginLeft="150dp"
-                    android:layout_marginRight="25dp" />
+                    android:layout_marginRight="25dp"
+                    tools:ignore="RtlHardcoded" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginRight="40dp"
-                    app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp"
-                    android:layout_alignParentRight="true"
-                    tools:ignore="VectorDrawableCompat" />
+
             </RelativeLayout>
 
             <EditText
@@ -229,7 +224,7 @@
                 android:hint="Your NID number"
                 android:inputType="phone"
                 android:padding="15dp"
-                />
+                tools:ignore="HardcodedText" />
             <EditText
 
                 android:id="@+id/DetailsAddress"

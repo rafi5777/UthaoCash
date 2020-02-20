@@ -33,6 +33,7 @@ public class Account extends AppCompatActivity {
                     if (mAuth.getCurrentUser()!=null)
                     {
                         startActivity(new Intent(getApplicationContext(),Auth.class));
+                        overridePendingTransition(0, 0);
                     }
                     else {
 

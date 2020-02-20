@@ -28,13 +28,14 @@ public class Loan extends AppCompatActivity {
                     if (mAuth.getCurrentUser()!=null)
                     {
                         startActivity(new Intent(getApplicationContext(),Auth.class));
+                        overridePendingTransition(0, 0);
                     }
                     else {
 
                         Intent intent =new Intent(Loan.this,LoginPage.class);
                         startActivity(intent);
                     }
-                    overridePendingTransition(0, 0);
+
                     return true;
                 case R.id.navigation_notifications:
                     startActivity(new Intent(getApplicationContext(),Account.class));
